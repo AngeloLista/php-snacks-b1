@@ -1,0 +1,13 @@
+.gray-box {
+    display: inline-block;
+    background-color: gray;
+    height: 500px;
+    width: 30%;
+}
+
+.green-box {
+    display: inline-block;
+    background-color: green;
+    height: 500px;
+    width: 30%;
+}
