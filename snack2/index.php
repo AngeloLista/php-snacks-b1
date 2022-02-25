@@ -54,13 +54,16 @@ $posts = [
         ]
     ],
 ];
+var_dump($posts)
 ?>
 
 <body>
     <h1>Posts</h1>
     <ul>
         <?php for ($i = 0; $i > count($posts); $i++) : ?>
+            <?php echo var_dump($posts) ?>
             <li><?= $posts[$i] ?></li>
+
         <?php endfor; ?>
     </ul>
 
