@@ -36,7 +36,7 @@ $age = $_GET['age'] ?? '';
             echo 'Nessuna E-Mail ricevuta';
         } else {
             // E-mail characters validation
-            if (strpos($email, '@') && strpos($email, '.')) {
+            if (strpos($email, '@') !== false && strpos($email, '.') !== false) {
                 echo $email;
             } else {
                 echo "L'E-mail inserita non è valida. Deve contenere un '.' e '@'.";
@@ -57,7 +57,7 @@ $age = $_GET['age'] ?? '';
 
     <p>
         <?php
-        if ((strlen($name) > 3) && (strpos($email, '@') && strpos($email, '.')) && is_numeric($age)) {
+        if ((strlen($name) > 3) && (strpos($email, '@') !== false && strpos($email, '.')) !== false && is_numeric($age)) {
             echo 'ACCESSO RIUSCITO';
         } else {
             echo 'ACCESSO NEGATO';
