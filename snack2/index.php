@@ -65,9 +65,9 @@ $posts = [
             </li>
             <ul>
                 <?php foreach ($date as $post) : ?>
-                    <li> Post Title: <?= $post['title'] ?></li>
-                    <li> Post Author: <?= $post['author'] ?></li>
-                    <li> Post Text: <?= $post['text'] ?></li>
+                    <li><strong>Post Title:</strong> <?= $post['title'] ?></li>
+                    <li><strong>Post Author:</strong> <?= $post['author'] ?></li>
+                    <li><strong>Post Text:</strong> <?= $post['text'] ?></li>
                     <hr>
                 <?php endforeach; ?>
             </ul>
