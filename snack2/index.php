@@ -25,46 +25,56 @@ $posts = [
         ],
         [
             'title' => 'Post 2',
-            'author' => 'Michele Papagni',
+            'author' => 'Mario',
             'text' => 'Testo post 2'
         ],
     ],
     '10/02/2019' => [
         [
             'title' => 'Post 3',
-            'author' => 'Michele Papagni',
+            'author' => 'Vincenzo',
             'text' => 'Testo post 3'
         ]
     ],
     '15/05/2019' => [
         [
             'title' => 'Post 4',
-            'author' => 'Michele Papagni',
+            'author' => 'Maria',
             'text' => 'Testo post 4'
         ],
         [
             'title' => 'Post 5',
-            'author' => 'Michele Papagni',
+            'author' => 'Anna',
             'text' => 'Testo post 5'
         ],
         [
             'title' => 'Post 6',
-            'author' => 'Michele Papagni',
+            'author' => 'Rosaria',
             'text' => 'Testo post 6'
         ]
     ],
 ];
-var_dump($posts)
 ?>
 
 <body>
+    <h1>test</h1>
+    <?php var_dump($posts['10/01/2019']) ?>
+
+
+
     <h1>Posts</h1>
     <ul>
-        <?php for ($i = 0; $i > count($posts); $i++) : ?>
-            <?php echo var_dump($posts) ?>
-            <li><?= $posts[$i] ?></li>
+        <?php foreach ($posts as $date) : ?>
+            <li> Data: <?= $date ?></li>
+            <ul>
+                <?php foreach ($date as $post) : ?>
+                    <li style="color: green;"> Post Author: <?= $post['author'] ?></li>
+                    <li style="color: red;"> Post Title: <?= $post['title'] ?></li>
+                    <li style="color: blue"> Post Text: <?= $post['text'] ?></li>
+                <?php endforeach; ?>
+            </ul>
 
-        <?php endfor; ?>
+        <?php endforeach; ?>
     </ul>
 
 </body>
