@@ -21,56 +21,54 @@ $posts = [
         [
             'title' => 'Post 1',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 1'
+            'text' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
         ],
         [
             'title' => 'Post 2',
             'author' => 'Mario',
-            'text' => 'Testo post 2'
+            'text' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
         ],
     ],
     '10/02/2019' => [
         [
             'title' => 'Post 3',
             'author' => 'Vincenzo',
-            'text' => 'Testo post 3'
+            'text' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
         ]
     ],
     '15/05/2019' => [
         [
             'title' => 'Post 4',
             'author' => 'Maria',
-            'text' => 'Testo post 4'
+            'text' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
         ],
         [
             'title' => 'Post 5',
             'author' => 'Anna',
-            'text' => 'Testo post 5'
+            'text' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
         ],
         [
             'title' => 'Post 6',
             'author' => 'Rosaria',
-            'text' => 'Testo post 6'
+            'text' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
         ]
     ],
 ];
 ?>
 
 <body>
-    <h1>test</h1>
-    <?php var_dump($posts['10/01/2019']) ?>
-
-
-
     <h1>Posts</h1>
     <ul>
-        <?php foreach ($posts as $date) : ?>
-            <li> Data: <?= $date ?></li>
+        <?php foreach ($posts as $key => $date) : ?>
+            <li>
+                <h3>Data: <?= $key ?></h3>
+            </li>
             <ul>
                 <?php foreach ($date as $post) : ?>
-                    <li style="color: green;"> Post Author: <?= $post['author'] ?></li>
-                    <li style="color: red;"> Post Title: <?= $post['title'] ?></li>
-                    <li style="color: blue"> Post Text: <?= $post['text'] ?></li>
+                    <li> Post Title: <?= $post['title'] ?></li>
+                    <li> Post Author: <?= $post['author'] ?></li>
+                    <li> Post Text: <?= $post['text'] ?></li>
+                    <hr>
                 <?php endforeach; ?>
             </ul>
 
